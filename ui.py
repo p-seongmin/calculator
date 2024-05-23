@@ -50,8 +50,8 @@ class View(QWidget):
         self.resize(256, 256)                       # 원도 사이즈
         self.show()                                 # 원도 화면이 표시되도록 호출
 
-    def activateMessage(self):
-        self.te1.appendPlainText("Button clicked!")
+    def activateMessage(self, text):
+        self.te1.appendPlainText(text)
 
     def clearMessage(self):
         self.te1.clear()

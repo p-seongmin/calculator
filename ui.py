@@ -15,11 +15,13 @@ class View(QWidget):
         self.te1=QPlainTextEdit()
         self.te1.setReadOnly(True)
         
-        self.btn1=QPushButton("Message", self)              # 버튼 추가
+        self.btn1=QPushButton("Calc", self)              # 버튼 추가
         self.btn2=QPushButton("Clear", self)
 
         self.le1=QLineEdit('0', self)
         self.le1.setAlignment(QtCore.Qt.AlignRight)
+        self.le1.setFocus(True)
+        self.le1.selectAll()
 
         self.le2=QLineEdit('0', self)
         self.le2.setAlignment(QtCore.Qt.AlignRight)
@@ -50,8 +52,8 @@ class View(QWidget):
         self.resize(256, 256)                       # 원도 사이즈
         self.show()                                 # 원도 화면이 표시되도록 호출
 
-    def activateMessage(self, text):
+    def setDispaly(self):
         self.te1.appendPlainText(text)
-
+        
     def clearMessage(self):
         self.te1.clear()

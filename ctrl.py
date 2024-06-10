@@ -32,7 +32,7 @@ class Control:
         try: 
             if (b==0):
                 raise Exception("Divisor Error")
-        except Exception as 3:
+        except Exception as e:
             return e
         return a/b
     
